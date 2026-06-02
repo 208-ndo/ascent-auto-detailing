@@ -346,6 +346,50 @@ h3 {
   text-align: center;
 }
 
+.reviews-section {
+  background: #080808;
+  border-top: 1px solid var(--line);
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.review-card {
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 26px;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(215, 167, 60, 0.12), rgba(255, 255, 255, 0.02)),
+    var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.stars {
+  color: var(--gold-2);
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+}
+
+.review-card p {
+  margin-bottom: 0;
+  color: var(--text);
+  font-size: clamp(1.05rem, 2vw, 1.28rem);
+  line-height: 1.35;
+}
+
+.review-card strong {
+  color: var(--gold-2);
+  font-size: 0.88rem;
+  letter-spacing: 0.12em;
+}
+
 .cta-band {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -629,6 +673,10 @@ a:focus {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .reviews-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .service-card.featured {
     grid-column: span 2;
   }
@@ -656,6 +704,7 @@ a:focus {
 
   .trust-strip,
   .service-grid,
+  .reviews-grid,
   .cta-band,
   .split-section,
   .contact-section {
@@ -758,6 +807,11 @@ a:focus {
 
   .service-card {
     min-height: 230px;
+    padding: 20px;
+  }
+
+  .review-card {
+    min-height: 190px;
     padding: 20px;
   }
 
